@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.about-section {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  padding: 80px 30px;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+  .about-text p {
+    margin-bottom: 20px;
+  }
+
+.about-skills {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+  .about-skills h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1f2937;
+  }
+
+  .about-skills ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .about-skills li {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+  }
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+  .resume-btn:hover {
+    background-color: #2563eb;
+  }
+
+/* Soft Skill Cards */
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.skill-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  font-weight: 600;
+  color: #374151;
+  transition: transform 0.3s ease;
+}
+
+  .skill-card:hover {
+    transform: translateY(-5px);
+  }
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
