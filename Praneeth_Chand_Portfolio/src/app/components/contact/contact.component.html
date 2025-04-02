@@ -1,0 +1,23 @@
+<section class="contact-section" id="contact">
+  <h2 class="contact-title">Get in Touch</h2>
+
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <p><strong>📍 Location:</strong> Bengaluru, India</p>
+      <p><strong>📧 Email:</strong> praneethchand99&#64;gmail.com</p>
+      <p><strong>📞 Phone:</strong> 9553312516</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/praneeth-chand/" target="_blank">LinkedIn</a>
+        <a href="https://leetcode.com/u/praneeth-chand/" target="_blank">LeetCode</a>
+      </div>
+    </div>
+
+    <form class="contact-form" (submit)="onSubmit($event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
