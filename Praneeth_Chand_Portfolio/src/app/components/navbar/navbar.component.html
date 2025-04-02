@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">Praneeth Chand</div>
+
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-icon" (click)="toggleMenu()">
+      <span [class.active]="menuOpen">&#9776;</span>
+    </div>
+  </div>
+</nav>
