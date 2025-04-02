@@ -75,18 +75,28 @@
   margin-bottom: 30px;
 }
 
-.hero-buttons {
+.hero-socials {
+  margin-top: 20px;
   display: flex;
-  gap: 16px;
+  gap: 20px;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
-  .hero-buttons {
+  .hero-socials {
     justify-content: flex-start;
   }
 }
+
+.hero-socials a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+  .hero-socials a img:hover {
+    transform: scale(1.1);
+  }
 
 .btn {
   padding: 10px 20px;
@@ -120,3 +130,14 @@
   font-size: 0.9rem;
   color: #6b7280;
 }
+
+  .contact-info a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
