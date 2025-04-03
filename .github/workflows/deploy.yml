@@ -50,7 +50,9 @@ jobs:
 
 
       - name: Set permissions for dist folder
-        run: chmod -R 777 ./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio
+        run: |
+          echo {{secrets.GH_TOKEN}}
+          chmod -R 777 ./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio
 
       - name: Deploy to GitHub Pages
         run: |
