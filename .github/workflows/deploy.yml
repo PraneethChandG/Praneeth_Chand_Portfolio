@@ -23,6 +23,10 @@ jobs:
           echo "Listing the contents of the dist folder:"
           ls -alh ./
 
+      - name: Install dependencies
+        run: |
+            cd Praneeth_Chand_Portfolio
+            npm install    
 
       - name: Build the Angular project
         run: |
