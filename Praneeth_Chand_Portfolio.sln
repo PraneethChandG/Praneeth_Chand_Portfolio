@@ -5,6 +5,13 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Praneeth_Chand_Portfolio", "Praneeth_Chand_Portfolio\Praneeth_Chand_Portfolio.esproj", "{BB1720C3-849F-42DA-8996-383A36FFF431}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{E06ABCEE-BE5F-4FE2-A1DF-5B56674324E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A40A4C2D-5898-49BC-ACEC-8234B9B7743B}"
+	ProjectSection(SolutionItems) = preProject
+		deploy.yml = deploy.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A40A4C2D-5898-49BC-ACEC-8234B9B7743B} = {E06ABCEE-BE5F-4FE2-A1DF-5B56674324E5}
 	EndGlobalSection
 EndGlobal
