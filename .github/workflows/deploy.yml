@@ -18,42 +18,27 @@ jobs:
         with:
           node-version: '18'
 
-      - name: List contents of dist directory
-        run: |
-          echo "Listing the contents of the dist folder:"
-          ls -alh ./
-
       - name: Install dependencies
         run: |
-            cd Praneeth_Chand_Portfolio
-            npm install    
+          cd Praneeth_Chand_Portfolio
+          npm install
 
       - name: Build the Angular project
         run: |
-            cd Praneeth_Chand_Portfolio 
-            npm run build -- --configuration production
+          cd Praneeth_Chand_Portfolio
+          npm run build -- --configuration production --base-href=/Praneeth_Chand_Portfolio/
 
       - name: Install angular-cli-ghpages
         run: |
-            cd Praneeth_Chand_Portfolio 
-            npm install -g angular-cli-ghpages
-
-      - name: Configure Git user
-        run: |
-          git config --global user.email "praneethchand99@gmail.com "
-          git config --global user.name "PraneethChandG"
-
-      - name: List contents of dist directory
-        run: |
-          echo "Listing the contents of the dist folder:"
-          ls -alh ./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio/browser
-
-
-      - name: Set permissions for dist folder
-        run: |
-          chmod -R 777 ./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio
+          cd Praneeth_Chand_Portfolio
+          npm install -g angular-cli-ghpages
 
       - name: Deploy to GitHub Pages
         run: |
-          npx angular-cli-ghpages --dir=./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio/browser --repo=https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/PraneethChandG/Praneeth_Chand_Portfolio.git --branch=gh-pages --no-silent
-          
+          cd Praneeth_Chand_Portfolio
+          npx angular-cli-ghpages \
+            --dir=dist/praneeth-chand-portfolio/browser \
+            --base-href=/Praneeth_Chand_Portfolio/ \
+            --repo=https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Praneeth_Chand_Portfolio/Praneeth_Chand_Portfolio.git \
+            --branch=gh-pages \
+            --no-silent
