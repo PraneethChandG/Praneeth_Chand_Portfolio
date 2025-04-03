@@ -50,9 +50,9 @@ jobs:
 
 
       - name: Set permissions for dist folder
-        run: chmod -R 777 ./Praneeth_Chand_Portfolio/dist/Praneeth_Chand_Portfolio
+        run: chmod -R 777 ./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio
 
       - name: Deploy to GitHub Pages
         run: |
-          npx angular-cli-ghpages --dir=./dist/Praneeth_Chand_Portfolio/ --repo=https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Praneeth_Chand_Portfolio/Praneeth_Chand_Portfolio.git --branch=gh-pages --no-silent
+          npx angular-cli-ghpages --dir=./dist/praneeth-chand-portfolio/ --repo=https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Praneeth_Chand_Portfolio/Praneeth_Chand_Portfolio.git --branch=gh-pages --no-silent
           
