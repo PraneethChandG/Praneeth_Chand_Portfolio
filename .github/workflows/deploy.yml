@@ -38,7 +38,6 @@ jobs:
           cd Praneeth_Chand_Portfolio
           npx angular-cli-ghpages \
             --dir=dist/praneeth-chand-portfolio/browser \
-            --base-href=/Praneeth_Chand_Portfolio/ \
-            --repo=https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Praneeth_Chand_Portfolio/Praneeth_Chand_Portfolio.git \
+            --repo=https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/PraneethChandG/Praneeth_Chand_Portfolio.git \
             --branch=gh-pages \
             --no-silent
