@@ -32,6 +32,12 @@ jobs:
         run: |
           cd Praneeth_Chand_Portfolio
           npm install -g angular-cli-ghpages
+      
+      - name: Configure Git user
+        run: |
+          git config --global user.email "praneethchand99@gmail.com "
+          git config --global user.name "PraneethChandG"
+
 
       - name: Deploy to GitHub Pages
         run: |
