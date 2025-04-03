@@ -36,8 +36,8 @@ jobs:
 
       - name: Configure Git user
         run: |
-          git config --global user.email "vt325@njit.edu"
-          git config --global user.name "Praneeth_Chand_Portfolio"
+          git config --global user.email "praneethchand99@gmail.com "
+          git config --global user.name "PraneethChandG"
 
       - name: List contents of dist directory
         run: |
