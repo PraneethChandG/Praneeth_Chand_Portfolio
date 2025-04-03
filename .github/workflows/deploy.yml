@@ -46,7 +46,7 @@ jobs:
       - name: List contents of dist directory
         run: |
           echo "Listing the contents of the dist folder:"
-          ls -alh ./Praneeth_Chand_Portfolio/dist
+          ls -alh ./Praneeth_Chand_Portfolio/dist/praneeth-chand-portfolio
 
 
       - name: Set permissions for dist folder
