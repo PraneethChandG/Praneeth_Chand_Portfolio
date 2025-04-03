@@ -1,39 +1,54 @@
-name: Deploy AngularJS Project to GitHub Pages
+name: CI/CD for Angular App
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  build_and_deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout the repository
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
 
-      - name: Install dependencies
+      - name: List contents of dist directory
         run: |
-          npm install
-          npm install --save-dev @types/angular
-          npm install --save gh-pages
-          
-      - name: Build the AngularJS project
+          echo "Listing the contents of the dist folder:"
+          ls -alh ./
+
+
+      - name: Build the Angular project
         run: |
-          npm run build
-          
+            cd Praneeth_Chand_Portfolio 
+            npm run build -- --configuration production
+
+      - name: Install angular-cli-ghpages
+        run: |
+            cd Praneeth_Chand_Portfolio 
+            npm install -g angular-cli-ghpages
+
+      - name: Configure Git user
+        run: |
+          git config --global user.email "vt325@njit.edu"
+          git config --global user.name "Praneeth_Chand_Portfolio"
+
+      - name: List contents of dist directory
+        run: |
+          echo "Listing the contents of the dist folder:"
+          ls -alh ./Praneeth_Chand_Portfolio/dist
+
+
+      - name: Set permissions for dist folder
+        run: chmod -R 777 ./Praneeth_Chand_Portfolio/dist/Praneeth_Chand_Portfolio
+
       - name: Deploy to GitHub Pages
         run: |
-          npm run deploy
-
-      - name: Deployment Complete
-        run: echo "Your AngularJS app is now live on GitHub Pages."
+          npx angular-cli-ghpages --dir=./dist/Praneeth_Chand_Portfolio/ --repo=https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Praneeth_Chand_Portfolio/Praneeth_Chand_Portfolio.git --branch=gh-pages --no-silent
+          
